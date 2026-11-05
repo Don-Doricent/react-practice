@@ -13,9 +13,7 @@ export default function StarWarsFetch() {
 
   const [character, setCharacter] = React.useState();
   React.useEffect(() => {
-    fetch(`https://swapi.dev/api/people/1`);
-    console
-      .log(character)
+    fetch("https://swapi.dev/api/people/1")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
