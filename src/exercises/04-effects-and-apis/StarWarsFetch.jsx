@@ -1,3 +1,4 @@
+import React from "react";
 export default function StarWarsFetch() {
   // CURRENT SCRIMBA CONCEPT: fetching, state, and useEffect
   // TODO (in order):
@@ -10,11 +11,24 @@ export default function StarWarsFetch() {
   // IMPORTANT: Do not put fetch directly in the component body.
   // Try each step without looking at the instructor's solution.
 
+  const [character, setCharacter] = React.useState();
+  React.useEffect(() => {
+    fetch(`https://swapi.dev/api/people/1`);
+    console
+      .log(character)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setCharacter(data);
+      });
+  }, []);
+
   return (
     <section>
       <h2>Effects + APIs</h2>
-      <p>Challenge: fetch a Star Wars character and show their name and height.</p>
+      <p>Name: {character?.name}</p>
+      <p>Height: {character?.height}</p>
       <div className="work-area">Your fetched character will appear here.</div>
     </section>
-  )
+  );
 }
