@@ -36,7 +36,7 @@ export default function ArrayDetective() {
       <h2>1. Array Detective</h2>
       <p>Get a single object out of an array, then read its properties.</p>
       <div className="work-area">
-        <p>Explorer: {chosenExplorer?.name && chosenExplorer.planet}</p>
+        <p>Explorer:{chosenExplorer?.name && chosenExplorer.planet}</p>
         <p>Planet: {/* TODO: render the nested planet name */}</p>
       </div>
     </section>
