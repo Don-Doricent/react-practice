@@ -22,7 +22,7 @@ export default function RandomSelector() {
 
   return (
     <section>
-      <h2>2. Random Snack Selector </h2>
+      <h2>2. Random Snack Selector</h2>
       <p>Click to pick a random object from an array.</p>
       <button type="button" onClick={pickSnack}>
         Pick a snack
