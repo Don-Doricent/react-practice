@@ -4,6 +4,7 @@ import StatePractice from "./exercises/03-state-and-events/StatePractice.jsx";
 import StarWarsFetch from "./exercises/04-effects-and-apis/StarWarsFetch.jsx";
 import JsWarmups from "./exercises/05-js-mini-challenges/JsWarmups.jsx";
 import Nov05Practice from "./exercises/06-nov05-practice/Nov05Practice.jsx";
+import PropsDrill from "./exercises/nov-17-practice/PropsDrill.jsx";
 
 const exercises = [
   {
@@ -36,10 +37,16 @@ const exercises = [
     category: "Independent React practice",
     Component: Nov05Practice,
   },
+  {
+    id: "nov17",
+    title: "Nov 17 - Props Practice",
+    category: "Independent React practice",
+    Component: PropsDrill,
+  },
 ];
 
 export default function App() {
-  const [selected, setSelected] = useState("effects");
+  const [selected, setSelected] = useState("nov17");
   const active = exercises.find((exercise) => exercise.id === selected);
   const ActiveComponent = active.Component;
 
